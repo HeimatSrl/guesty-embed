@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guesty Booking</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="guesty" src="https://heimat1.guestybookings.com/" frameborder="0"></iframe>
+
+  <script>
+    function resizeIframe() {
+      const iframe = document.getElementById('guesty');
+      if (!iframe) return;
+      iframe.style.height = window.innerHeight + 3000 + "px";
+    }
+
+    window.addEventListener("load", resizeIframe);
+    window.addEventListener("resize", resizeIframe);
+  </script>
+</body>
+</html>
